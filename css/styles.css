@@ -1,0 +1,238 @@
+:root {
+    /* Font */
+    --main-font: 'Roboto', sans-serif;
+    --title-font: 'Raleway', sans-serif;
+
+    /* Text colors  */
+    --white-color: #ffffff;
+    --text-navyblue: #2E2F42;
+    --text-slate: #434455;
+    --activate-iris: #4D5AE5;
+    --pressed-ocean: #404BBF;
+    --success-green-100: rgb(49, 208, 170);
+    --success-green-75: rgb(49, 208, 170, 0.75);
+    --success-green-50: rgb(49, 208, 170, 0.5);
+    --success-green-10: rgba(49, 208, 170, 0.102);
+    --light-slate: #8E8F99;
+    --accent: #E7E9FC;
+    --navyblue-modal: rgb(46, 47, 66, 0.4);
+
+
+    /* Background colors */
+    --bg-light-cloud: #F4F4FD;
+    --bg-hero-gray: rgba(46, 47, 66, 0.7);
+}
+
+/* Base styles */
+body{
+    font-family: var(--main-font);
+    background-color: var(--white-color);
+    font-size: 16px;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+button{
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    border-width: 0;
+    
+    cursor: pointer;
+}
+button:hover,button:focus{
+    background: var(--pressed-ocean);
+}
+
+/*Header*/
+.header{
+
+}
+.header-nav {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    color: var(--text-navyblue);
+}
+
+.logo{
+    font-family: var(--title-font);
+    font-weight: 800;
+    font-size: 18px;
+    line-height: calc(24 / 18);
+    letter-spacing: 0.03em;
+
+    color: var(--activate-iris);
+}
+
+.logo-second-part {
+    color: var(--text-navyblue);
+}
+
+.nav-link {
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    color: var(--text-navyblue);
+}
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--pressed-ocean)
+}
+
+.header-contacts {}
+
+.contacts-list {}
+
+.contacts-link {
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    color: var(--text-slate);
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+    color: var(--pressed-ocean)
+}
+
+/*Footer*/
+.footer {
+    background-color: var(--text-navyblue);
+}
+
+.footer-logo {
+    font-family: var(--title-font);
+    font-weight: 800;
+    font-size: 18px;
+    line-height: calc(21 / 18);
+
+    align-items: center;
+    letter-spacing: 0.03em;
+
+    color: var(--activate-iris)
+}
+
+.footer-second-color {
+    color: var(--bg-light-cloud);
+}
+
+.footer-desc {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+}
+/*Portfolio*/
+/*Portfolio - Categories section*/
+.categories-section {}
+
+.ctg-list {}
+
+.ctg-list-item {}
+
+.ctg-btn {
+    background: var(--bg-light-cloud);
+    color: var(--activate-iris);
+    border: 1px solid var(--accent);
+}
+.ctg-btn:hover, .ctg-btn:active {
+    color: white;
+}
+
+/* Index HTML Main page*/
+
+/*Main page - Hero section*/
+.hero-section {
+    background-color: var(--text-navyblue);
+}
+
+.hero-title {
+    font-size: 56px;
+    line-height: calc(60 / 56);
+    letter-spacing: 0.02em;
+
+    color: var(--white-color);
+}
+
+.hero-btn {
+    background: var(--activate-iris);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    color: var(--white-color);
+}
+.hero-btn:hover, .hero-btn:active{
+    background: var(--pressed-ocean);
+}
+/*Main page - Description section*/
+.desc-section {
+}
+
+.desc-title {}
+
+.desc-list {}
+
+.desc-list-item {}
+
+.section-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(24 / 20);
+    letter-spacing: 0.02em;
+
+    color: var(--text-navyblue);
+}
+
+.section-desc {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--text-slate);
+}
+/*Main page - What to do section*/
+.to-do-section {
+}
+
+.section-title{
+    font-size: 36px;
+    line-height: calc(40 / 36);
+    letter-spacing: 0.02em;
+
+    color: var(--text-navyblue);
+}
+
+.to-do-list {}
+
+.to-do-item {}
+/*Main page - Team section*/
+.team-section {
+    background-color: var(--bg-light-cloud);
+}
+
+.team-list {}
+
+.team-list-item {}
+
+.team-photo {}
+
+.team-position {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    color: var(--text-slate);
+}
+
+
+/*Portfolio - Catalog section*/
+
+.list {}
+
+.list-item {}
+
+.image {}
+
