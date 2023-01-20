@@ -21,19 +21,62 @@
     /* Background colors */
     --bg-light-cloud: #F4F4FD;
     --bg-hero-gray: rgba(46, 47, 66, 0.7);
+    /* Card set */
+    --indent: 24px;
+    --items: 4;
 }
+
+/* reset start */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* reset end */
 
 /* Base styles */
 body{
     font-family: var(--main-font);
     background-color: var(--white-color);
     font-size: 16px;
-}
-ul{
-    list-style: none;
-}
-a{
-    text-decoration: none;
 }
 
 button{
@@ -47,15 +90,58 @@ button:hover,button:focus{
     background: var(--pressed-ocean);
 }
 
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    /*outline: 2px solid blueviolet;
+    outline-offset: -2px;*/
+}
+
+.container {
+    width: 1440px;
+    padding-left: 156px;
+    padding-right: 156px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /*outline: 2px solid red;
+    outline-offset: -2px;*/
+}
+
+/* Card set / grid*/
+
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--indent);
+}
+
+.card-set-item {
+    flex-basis: calc((100% - (var(--indent) * (var(--items) - 1))) / var(--items));
+}
+
 /*Header*/
 .header{
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.header-portfolio {
+    border-bottom: 1px solid var(--accent);
+}
+.header-wrapper {
+    display: flex;
+    align-items: center;
 
 }
 .header-nav {
+    display: flex;
+    align-items: center;
     line-height: 1.5;
     letter-spacing: 0.02em;
 
     color: var(--text-navyblue);
+    margin-right: auto;
 }
 
 .logo{
@@ -66,6 +152,7 @@ button:hover,button:focus{
     letter-spacing: 0.03em;
 
     color: var(--activate-iris);
+    margin-right: 76px;
 }
 
 .logo-second-part {
@@ -73,6 +160,7 @@ button:hover,button:focus{
 }
 
 .nav-link {
+    display: block;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -84,9 +172,16 @@ button:hover,button:focus{
     color: var(--pressed-ocean)
 }
 
-.header-contacts {}
+.header-pages {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 
-.contacts-list {}
+.contacts-list {
+    display: flex;
+    gap: 40px;
+}
 
 .contacts-link {
     font-style: normal;
@@ -103,10 +198,13 @@ button:hover,button:focus{
 
 /*Footer*/
 .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
     background-color: var(--text-navyblue);
 }
 
 .footer-logo {
+    display: block;
     font-family: var(--title-font);
     font-weight: 800;
     font-size: 18px;
@@ -115,7 +213,8 @@ button:hover,button:focus{
     align-items: center;
     letter-spacing: 0.03em;
 
-    color: var(--activate-iris)
+    color: var(--activate-iris);
+    margin-bottom: 16px;
 }
 
 .footer-second-color {
@@ -123,35 +222,28 @@ button:hover,button:focus{
 }
 
 .footer-desc {
+    width: 264px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--accent);
-}
-/*Portfolio*/
-/*Portfolio - Categories section*/
-.categories-section {}
-
-.ctg-list {}
-
-.ctg-list-item {}
-
-.ctg-btn {
-    background: var(--bg-light-cloud);
-    color: var(--activate-iris);
-    border: 1px solid var(--accent);
-}
-.ctg-btn:hover, .ctg-btn:active {
-    color: white;
 }
 
 /* Index HTML Main page*/
 
 /*Main page - Hero section*/
 .hero-section {
+    padding-top: 188px;
+    padding-bottom: 188px;
     background-color: var(--text-navyblue);
+
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-title {
+    width: 495px;
+    margin-bottom: 48px;
+
     font-size: 56px;
     line-height: calc(60 / 56);
     letter-spacing: 0.02em;
@@ -160,6 +252,9 @@ button:hover,button:focus{
 }
 
 .hero-btn {
+    border-radius: 4px;
+    min-width: 169px;
+    min-height: 56px;
     background: var(--activate-iris);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
@@ -170,15 +265,21 @@ button:hover,button:focus{
 }
 /*Main page - Description section*/
 .desc-section {
+    padding-bottom: 0;
 }
 
 .desc-title {}
 
-.desc-list {}
+.desc-list {
+}
 
-.desc-list-item {}
+.desc-list-item {
+    flex-basis: 264px;
+}
 
 .section-subtitle {
+    margin-bottom: 8px;
+
     font-weight: 500;
     font-size: 20px;
     line-height: calc(24 / 20);
@@ -193,18 +294,22 @@ button:hover,button:focus{
     color: var(--text-slate);
 }
 /*Main page - What to do section*/
-.to-do-section {
-}
+.to-do-section {}
 
 .section-title{
+    margin-bottom: 72px;
+
     font-size: 36px;
+    text-transform: capitalize;
     line-height: calc(40 / 36);
     letter-spacing: 0.02em;
-
+    text-align: center;
     color: var(--text-navyblue);
 }
 
-.to-do-list {}
+.to-do-list {
+    --items: 3;
+}
 
 .to-do-item {}
 /*Main page - Team section*/
@@ -212,9 +317,19 @@ button:hover,button:focus{
     background-color: var(--bg-light-cloud);
 }
 
+.team-wrapper {
+    padding: 32px 16px;
+
+    background-color: var(--white-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+}
+
 .team-list {}
 
-.team-list-item {}
+.team-list-item {
+    text-align: center;
+}
 
 .team-photo {}
 
@@ -230,9 +345,53 @@ button:hover,button:focus{
 
 /*Portfolio - Catalog section*/
 
-.list {}
+.categories-section {
+    padding-top: 96px;
+}
+
+.ctg-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    padding-bottom: 72px;
+}
+
+.ctg-list-item {}
+
+.ctg-btn {
+    padding: 12px 24px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+
+    letter-spacing: 0.04em;
+
+    background: var(--bg-light-cloud);
+    color: var(--activate-iris);
+    border: 1px solid var(--accent);
+
+}
+
+.ctg-btn:hover,
+.ctg-btn:active {
+    color: white;
+}
+
+.cards-wrapper {
+    background-color: var(--white-color);
+    border: 1px solid var(--accent);
+    border-top: none;
+
+    padding: 32px 0px 32px 16px;
+}
+
+.list {
+    row-gap: 48px;
+}
 
 .list-item {}
 
 .image {}
-
