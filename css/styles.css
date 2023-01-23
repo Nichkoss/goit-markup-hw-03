@@ -98,9 +98,9 @@ button:hover,button:focus{
 }
 
 .container {
-    width: 1440px;
-    padding-left: 156px;
-    padding-right: 156px;
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
 
@@ -231,7 +231,8 @@ button:hover,button:focus{
 /* Index HTML Main page*/
 
 /*Main page - Hero section*/
-.hero-section {
+.hero {
+    text-align: center;
     padding-top: 188px;
     padding-bottom: 188px;
     background-color: var(--text-navyblue);
@@ -266,17 +267,17 @@ button:hover,button:focus{
 .hero-btn:hover, .hero-btn:active{
     background: var(--pressed-ocean);
 }
-/*Main page - Description section*/
-.desc-section {
+/*Main page - Features section*/
+.features {
     padding-bottom: 0;
 }
 
-.desc-title {}
+.features-title {}
 
-.desc-list {
+.features-list {
 }
 
-.desc-list-item {
+.features-list-item {
     flex-basis: 264px;
 }
 
@@ -296,8 +297,8 @@ button:hover,button:focus{
     letter-spacing: 0.02em;
     color: var(--text-slate);
 }
-/*Main page - What to do section*/
-.to-do-section {}
+/*Main page - About section*/
+.about {}
 
 .section-title{
     margin-bottom: 72px;
@@ -310,13 +311,13 @@ button:hover,button:focus{
     color: var(--text-navyblue);
 }
 
-.to-do-list {
+.about-list {
     --items: 3;
 }
 
-.to-do-item {}
+.about-item {}
 /*Main page - Team section*/
-.team-section {
+.team {
     background-color: var(--bg-light-cloud);
 }
 
