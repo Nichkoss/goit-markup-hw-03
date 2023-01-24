@@ -361,7 +361,7 @@ button:hover,button:focus{
     justify-content: center;
     gap: 24px;
 
-    padding-bottom: 72px;
+    margin-bottom: 72px;
 }
 
 .ctg-list-item {}
